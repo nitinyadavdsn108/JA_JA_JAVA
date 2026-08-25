@@ -1,4 +1,10 @@
 public class LL{
+
+    private int size;
+
+    LL(){
+        this.size = 0;
+    }
    
     class node{
         String data;
@@ -6,6 +12,7 @@ public class LL{
         node(String data){
             this.data = data;
             this.next = null;
+            size++;
         }
     }
 
@@ -52,7 +59,7 @@ public void showwLL(){
         System.out.println("list is empty");
         return;
     }
-    
+
 
 
     node temp = head;
@@ -60,12 +67,62 @@ public void showwLL(){
         System.out.print(temp.data+"-->");
         temp = temp.next;
     }
+
+    System.out.print("NULL");
 }
 
 
 
+/* delete First */
+/* just move head by one node forward */
+public void delFirst(){
+    size--;
 
-    public static void main(String[] args) {
+    if(head == null){
+        System.out.println("the list is empty");
+        return;
+    }
+
+    head = head.next;
+
+}
+
+
+/* delete Last */
+/* find the second last node by traversing temp.next until it is null */
+/* two node pointers temp and secondLast will work together. */
+/* both will keep going to there next node until temp.next-->null  */
+
+public void delLast(){
+    if(head == null){
+        System.out.println("the list is empty");
+        return;
+    }
+
+    size--;
+    if(head.next == null){
+        head = null;
+        return;
+    }
+
+    node temp = head.next;
+    node secondLast = head;
+
+    while(temp.next != null){
+            temp = temp.next;
+            secondLast = secondLast.next;
+    }
+
+    secondLast.next = null;
+}
+
+
+public int getSize(){
+    return size;
+}
+
+
+public static void main(String[] args) {
         /* insertion in ll is O(1).
             searching in ll is O(n).  */
 
@@ -90,6 +147,14 @@ public void showwLL(){
         list.addFirst("this");
         list.addLast("World!");
         list.showwLL();
+        System.out.println();
+        list.delFirst();
+        list.showwLL();
+        System.out.println();
+        list.delLast();
+        list.showwLL();
+        System.out.println();
+        System.out.println(list.getSize());
 
     }
 }
