@@ -27,13 +27,9 @@ public class SolutionInsertionSort {
    public static void main(String[] args) {
     
     List<Pair> list = new ArrayList<>();
-    Pair p = new Pair(1,"uranus");
-    Pair p1 = new Pair(3,"aloha");
-    Pair p2 = new Pair(2,"csma");
-    list.add(p);
-    list.add(p1);
-    list.add(p2);
-;
+
+    // by default case is passing an empty List
+    
     System.out.println(
         insertionSort(list));
    }
