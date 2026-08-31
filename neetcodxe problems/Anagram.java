@@ -10,7 +10,7 @@ public class Anagram{
                 for(int i=0 ; i < s.length() ; i++){
                     dp[i] = 1;
                     int j = i-1;
-                    while(j>=0 && s  ){
+                    while(j>=0 &&   ){
                         dp[i] = Math.max(dp[i] , dp[j]+1);
                         j--;
                     }
