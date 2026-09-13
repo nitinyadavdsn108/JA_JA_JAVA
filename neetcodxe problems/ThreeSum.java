@@ -7,17 +7,32 @@ public class ThreeSum {
         int[] nums = { -1, 0, 1, 2, -1, -4 };
         int target = 0;
         List<List<Integer>> list = new ArrayList<>();
-        
-        // first let us find all combinations of 3 that satisfys
-        for (int i = 0; i < nums.length; i++) {
-            for (int j = i + 1; j < nums.length; j++) {
-                for (int k = j + 1; k < nums.length; k++) {
-                    if (nums[i] + nums[j] + nums[k] == target)
-                        list.add(Arrays.asList(nums[i],nums[j],nums[k]));
-                }
-            }
-        }
 
-        System.out.println(list);
+        Arrays.sort(nums);
+
+        for(int i=0 ; i<nums.length ; i++){
+            int left = i+1;
+            int right = nums.length-1;
+            while(left<=right){
+                int sum = nums[left]+nums[right]+nums[i];
+
+                if(sum < target){
+                    left++;
+                }else if(sum > target){
+                    right--;
+                }else{
+                    if(!list.contains(Arrays.asList(nums[i],nums[left],nums[right]))){
+                        list.add(Arrays.asList(nums[i],nums[left],nums[right]));
+                    }
+                }
+                left++;
+                right--;
+            }
+        
+        }
+    
+    
+    System.out.println(list);
+    
     }
 }
