@@ -1,60 +1,86 @@
-public class minimumLengthOfSubarrays{
-    public static void minSumOfLengths(int[] arr, int target) {
-        int[] lengtharr = new int[arr.length];
-        for (int i = 0; i < lengtharr.length; i++) {
-            lengtharr[i] = 100;
-        }
+class Solution {
+    public int minSumOfLengths(int[] arr, int target) {
         int n = arr.length;
-        int j = 0;
-        int k = 0;
+        List<int[]> subarr = new ArrayList<>();
+        int start = 0;
+        int end = 0;
+        int length = 1;
+        int sum = arr[0];
+        // we will find all possible subarrays in this section
         for (int i = 0; i < n; i++) {
-            int sum = arr[i];
-            if(sum == target){
-                lengtharr[k++] =  1;
+            if (arr[i] == target) {
+                start = i;
+                end = i;
+                subarr.add(new int[] { start, end, 1 });
                 continue;
             }
-            if(i!=n-1){
+            if (i != n) {
+                int j = i + 1;
 
-            j = i + 1;
-    
-            }else{
-                continue;
-            }  
-            
-                 while (sum < target && j<n) {
-                sum += arr[j];
-                j++;
-            }
-            if (sum == target) {
-                lengtharr[k++] = j - i + 1;
-            }
-
-        }
-
-
-        for ( int l = 0; l < lengtharr.length; l++) {
-            System.out.print(lengtharr[l]+" ");
-        }
-
-
-        int min = lengtharr[0] + lengtharr[1];
-
-        for (int i = 0; i < n - 1; i++) {
-            for (int t = i + 1; t < n; t++) {
-              int  currentMin = lengtharr[i] + lengtharr[t];
-                if (min > currentMin) {
-                    min = currentMin;
+                if (j == n - 1) {
+                    sum = arr[i] + arr[j];
+                    if (sum == target) {
+                        start = i;
+                        end = j;
+                        length = j - i + 1;
+                        subarr.add(new int[] { start, end, length });
+                    }
+                } else if (j < n) {
+                    sum = arr[i];
+                    while (sum < target && j < n) {
+                        sum += arr[j++];
+                    }
+                    if (sum == target) {
+                        start = i;
+                        end = j;
+                        length = j - i ;
+                        subarr.add(new int[] { start, end, length });
+                    }
                 }
 
+            } else {
+
+                if (arr[i] == target) {
+                    start = i;
+                    end = i;
+                    subarr.add(new int[] { start, end, 1 });
+                    continue;
+                }
+            }
+
+        }
+
+        // before going to fin minlen let us seee wheather list contINS ANY SUBARRAYS more then 2 in number
+        if (subarr.size() < 2) {
+            return -1;
+        }
+
+        // to find minlen get the first two subarrays from list
+        int[] a = subarr.get(0);
+        int[] b = subarr.get(1);
+        int minlen = a[2] + b[2];
+        boolean isNonOverlapping = false;
+        for (int i = 0; i < subarr.size(); i++) {
+            a = subarr.get(i);
+            for (int j = i + 1; j < subarr.size(); j++) {
+                b = subarr.get(j);
+                //  if a's end is less then b's start then they would be non-overlapping arrays
+                if (a[1] < b[0]) {
+                    isNonOverlapping = true;
+                    sum = a[2] + b[2];
+                    if (sum < minlen) {
+                        minlen = sum;
+                    }
+                }
             }
         }
 
-        System.out.println(min);
+        if (isNonOverlapping) {
 
-    }
+            return minlen;
+        } else {
+            return -1;
+        }
 
-    public static void main(String[] args) {
-        int[] arr = {3,2,2,4,3};
-        minSumOfLengths(arr,3);
     }
 }
