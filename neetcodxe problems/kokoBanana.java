@@ -1,5 +1,7 @@
 public class kokoBanana {
     public static void main(String[] args) {
+        /* this is brute force appraoch it works intially for a small array.
+         */
 
         int[] piles = { 25,10,23,4 };
         int h = 4;
