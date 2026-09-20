@@ -1,3 +1,6 @@
+import java.util.ArrayList;
+import java.util.List;
+
 class Solution {
     public int minSumOfLengths(int[] arr, int target) {
         int n = arr.length;
