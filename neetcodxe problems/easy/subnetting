@@ -1,2 +1,8 @@
 some notes on subnetting ;
 the main drawback of classul addressing was waste og ip addresses
+so rverse of an arp the rarp resolves the ip address within a device from its mac adress uisng an rarp server and this usually happens in diskless coputers
+BOOTP does that part of rarp  of finding ip adress of host pc but it also bring extra network info like subnet mask , default gateway info , boot server info
+
+BOOTP was designed to provide this info during the boot process : when a computer boots it may need more network info not just an ip addresss. 
+so the host sends a broadcast rarp request and an rarp server which should be present in lan responses with ip adresss of that host .
+
