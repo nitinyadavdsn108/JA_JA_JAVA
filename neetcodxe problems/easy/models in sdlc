@@ -11,7 +11,7 @@ iterative model : this model develops the software in a continues iterative way 
 development cycle goes like : build--deploy--improve+build---deploy---improve+build------deploy
 
 sprial model : this model works in repeated improvement/iterations and continuous risk analysis.
-main distinctive thing in spiral model is that it is much oriented with reliability . reduce possible system failure due to any future bug that is reason why with each improved iteration stage risk analysis also done to elimiate system fault.
+main distinctive thing in spiral model is that it is much oriented with reliability . reduce possible system failure due to any future bug that is reason why with each improved iteration stage risk analysis also done to elimiate system fault.at the same time high-expertise are needed to predict future risks with any new proposed feature to be added . in nutshell appplying risk analysis is not cheap, small bussiness cannnot adopt this model as it is not feasible due to its high cost.
 
 
 time-boxing model : model focus on time slots given to complete one unit of work , it is upto the team to decide what they want to prioritize first but changing time slot is non-negotiable , the scope of work within this given time can be changed but not hte time itself.
