@@ -126,3 +126,29 @@ but i got the diea that client is not using the ip address can be used for anoth
 but in bootp this facility is not present a once a mapping for a client to ip is done
 we cannot pick the same ip to use for any other client.
 and we are calling this limitation as no dynamic leasing.
+
+
+
+now we have dhcp int opicture 
+
+Dynamic Host Configuraton protocol ( gives you ip address on demand)
+definitely it got dynamic configuaration meaning  an ip not used by one client can be given assigned to a
+diffrent client dynamically.
+also ip address is not rental means its not fixed to one client/host now it can be given to different client 
+on a temporary basis.
+
+An IP address is not permanently tied to one client.
+DHCP can dynamically assign an available IP to a client for a temporary period, 
+and later that IP can be assigned to another client.
+
+a dhcp pool conatains pool of ip addresses which would be dnamically assigned to any requesting client for 
+a temporary period.
+
+
+
+when the discover DHCP message is sent it contains info such as
+ src add : 0.0.0.0 and des add : 255.255.255.255 
+and port numbers as well which were des port : 67 and src port : 68 
+what are the significance of these port number why do they even exist?
+
+

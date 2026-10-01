@@ -1,0 +1,19 @@
+waterfall model : each phase is done one after another , we move to next phase only after completering the 
+current stage. biggest drawback of this model is it incompartible with changing client requirement, 
+adding new feature or any modification later on is not practical in this model . also it does not give temporary
+software version which makes user requirement to be updated more confusing.
+
+prototyping model : it allows the client to re-consider user requirement and add nnew suggestion
+by looking a temporary software mini-version built in order to give user a gist of the final software to be made.
+it gives room for improvement and user can reset the requirement.
+
+iterative model : this model develops the software in a continues iterative way , the thing it does is making small-small improvement in each iteration , the iterations are not time bounded but rather feature bounded the 
+development cycle goes like : build--deploy--improve+build---deploy---improve+build------deploy
+
+sprial model : this model works in repeated improvement/iterations and continuous risk analysis.
+main distinctive thing in spiral model is that it is much oriented with reliability . reduce possible system failure due to any future bug that is reason why with each improved iteration stage risk analysis also done to elimiate system fault.
+
+
+time-boxing model : model focus on time slots given to complete one unit of work , it is upto the team to decide what they want to prioritize first but changing time slot is non-negotiable , the scope of work within this given time can be changed but not hte time itself.
+time box -1 ----- time box 2-----time box 3-----time box 4
+
