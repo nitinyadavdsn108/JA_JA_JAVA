@@ -33,3 +33,15 @@ MAC → IP
 
 BOOTP:
 MAC → IP + other network configuration
+
+
+
+
+what is a relay agent doing when a bootp protocol has the thing 
+the client/src pc generates a udp packet encapsulated within a
+ ip packet conatinaing src mac add and src ip address as 0.0.0.0 since it does not know its ip address
+and broadcast this packet/request to all other host present in the lan ---
+the bootp server which has the client/src pc 's ip address response with a same packet format 
+containing the same info but with src ip address replaced with its actual ip address...
+the porocess is simple okay but what happens when the bootp server is not present in the same LAN, 
+then what it does and when do the relay agent comes into play
