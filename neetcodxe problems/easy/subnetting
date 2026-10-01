@@ -45,3 +45,50 @@ the bootp server which has the client/src pc 's ip address response with a same 
 containing the same info but with src ip address replaced with its actual ip address...
 the porocess is simple okay but what happens when the bootp server is not present in the same LAN, 
 then what it does and when do the relay agent comes into play
+
+
+LAN 1
+
+Client                         BOOTP Server
+  |                                  |
+  |------ BOOTP Request ------------>|
+  |                                  |
+  |<----- BOOTP Reply ---------------|
+
+
+
+so when the bootp server is present on another lan then relay agent comes into play..
+client broadcasting bootp request is not enough to get the bootp replay because the router do not
+forward the broadcast message/packet.
+
+
+  LAN 1                         LAN 2
+
+Client                       BOOTP Server
+  |                               |
+  |                               |
+  +--- Router --------------------+
+
+
+
+The relay agent receives the client's broadcast and
+forwards the BOOTP request toward the BOOTP server, allowing it to cross the router/network boundary.
+
+So when exactly does the relay agent come into play?
+Only when the BOOTP server is not on the client's local network.
+
+The key problem is:
+
+Client's BOOTP request is a broadcast → router won't normally forward it → 
+relay agent receives the broadcast and forwards it to the remote BOOTP server.
+
+
+Client
+  ↓
+Broadcast
+  ↓
+Router/Relay Agent
+  ↓
+Forwarded request
+  ↓
+BOOTP Server
