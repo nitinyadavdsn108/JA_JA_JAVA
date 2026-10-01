@@ -92,3 +92,37 @@ Router/Relay Agent
 Forwarded request
   ↓
 BOOTP Server
+
+
+
+
+
+the main two limitation of bootp server
+1) static preconfiguration : .static preconfiguration is the problem  of not able to assign an ip address
+to a new added device the bootp server cannot dynamically assign the ip address 
+beause it only reply based on preconfiguration already done.
+Existing configured device.
+
+----------------------------------------------------------
+
+MAC-A → 192.168.1.10
+        ↓
+BOOTP can answer
+
+------------------------------------------------------
+
+New device
+MAC-D → ???
+        ↓
+No preconfigured mapping
+        ↓
+BOOTP has no predefined IP to give it
+
+---------------------------------------------------
+
+
+2)no dynamic leasing of ip address :  leasing is the word i am not so much familiar with ,
+but i got the diea that client is not using the ip address can be used for another client
+but in bootp this facility is not present a once a mapping for a client to ip is done
+we cannot pick the same ip to use for any other client.
+and we are calling this limitation as no dynamic leasing.
