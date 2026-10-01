@@ -17,3 +17,40 @@ main distinctive thing in spiral model is that it is much oriented with reliabil
 time-boxing model : model focus on time slots given to complete one unit of work , it is upto the team to decide what they want to prioritize first but changing time slot is non-negotiable , the scope of work within this given time can be changed but not hte time itself.
 time box -1 ----- time box 2-----time box 3-----time box 4
 
+**Spot on! Option B (Verification) is 100% correct!** 🎯
+
+Your analogy is sharp and accurate: just like running test cases verifies whether the code matches expectations, holding formal peer reviews, walkthroughs, or inspections verifies whether design artifacts are correct before moving to implementation. In phases where executable code doesn't exist yet (like Requirements or System Design), human verification through reviews is the primary mechanism to catch defects early.
+
+---
+
+### **ETVX Practice Set Status** 📌
+
+* **Question 1:** **Option B (Verification - V)** ✅
+
+---
+
+Whenever you're ready, what are your choices for **Question 2** and **Question 3**?
+
+#### **Question 2 (Entry vs. Exit Hand-offs)**
+Before the **Testing Team** accepts a new software build to begin System Testing, they require the **Coding Team** to submit a *Code Build with 100% Unit Tests Passed and Zero Critical Bugs*. 
+
+How is this condition classified in the ETVX framework?
+* **A)** It acts as the **eXit Criteria (X)** for Coding, and the **Entry Criteria (E)** for System Testing.
+* **B)** It acts as the **Task (T)** for System Testing, and the **Verification (V)** for Coding.
+* **C)** It acts as the **Entry Criteria (E)** for Coding, and the **eXit Criteria (X)** for System Testing.
+
+#### **Question 3 (Why ETVX Embeds "Verification" in Every Phase)**
+Why does the ETVX framework mandate a **Verification (V)** step inside *every single phase* (Analysis, Design, Coding) rather than waiting to test everything at the very end of the project?
+* **A)** To replace the need for writing a Software Requirements Specification (SRS).
+* **B)** To enable **early defect removal** within each phase, preventing errors from propagating into later phases where fixing them becomes exponentially more expensive.
+* **C)** To allow developers to bypass writing documentation.
+
+---
+
+Drop your picks (**e.g., 2-A, 3-B**)!
+
+
+a) it acts a exit cretieria for coding phase because passing testcaes and checking potential system bug is the last thing to do in coding phase also this is requirement needed before starting the system testing phase it also acts as a entry criteria for system testing phase.
+
+
+b) to enalbe early defect removal within each phase , preventing errors from propagating into later phases
