@@ -3,6 +3,33 @@ the main drawback of classul addressing was waste og ip addresses
 so rverse of an arp the rarp resolves the ip address within a device from its mac adress uisng an rarp server and this usually happens in diskless coputers
 BOOTP does that part of rarp  of finding ip adress of host pc but it also bring extra network info like subnet mask , default gateway info , boot server info
 
+
+
+
 BOOTP was designed to provide this info during the boot process : when a computer boots it may need more network info not just an ip addresss. 
 so the host sends a broadcast rarp request and an rarp server which should be present in lan responses with ip adresss of that host .
 
+RARP = Reverse Address Resolution Protocol
+It performs MAC address → IP address resolution.
+A device that knows its MAC but doesn't know its IP sends a RARP request.
+An RARP server maintains the MAC-to-IP mapping and replies with the IP.
+It was historically used mainly by diskless computers during boot, but was later replaced by BOOTP and DHCP.
+
+RARP resolves a device's IP address from its MAC address using an RARP server. It was mainly used by diskless computers that did not have a local disk 
+containing their network configuration.
+
+
+Client
+   |
+   | BOOTP Request
+   | Broadcast
+   ↓
+BOOTP Server
+
+
+
+RARP:
+MAC → IP
+
+BOOTP:
+MAC → IP + other network configuration
