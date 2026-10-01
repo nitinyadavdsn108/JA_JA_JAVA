@@ -1,0 +1,140 @@
+re follows these 5 steps to complete
+
+
+Let's test whether you actually understood **Requirement Engineering**, rather than letting your brain politely nod at the textbook and retain nothing.
+
+### Questions
+
+**Q1.** What is the main purpose of Requirement Engineering?
+
+A) To write code
+B) To find out and define what the software should do
+C) To design the database
+D) To test the final software
+
+---
+
+**Q2.** A customer says:
+
+> "I want an online shopping system."
+
+The development team talks to the customer, asks questions, and gathers detailed requirements.
+
+Which RE activity is this?
+
+A) Validation
+B) Elicitation
+C) Management
+D) Implementation
+
+---
+
+**Q3.** The team has collected 50 requirements. They now check whether the requirements are **consistent, complete, feasible, and unambiguous**.
+
+Which activity is this?
+
+A) Elicitation
+B) Analysis
+C) Coding
+D) Deployment
+
+---
+
+**Q4.** The team writes the agreed requirements in a formal document.
+
+What is this document called?
+
+A) Design Document
+B) Test Plan
+C) SRS
+D) User Manual
+
+---
+
+**Q5.** Which of these is a **functional requirement**?
+
+A) The system should respond within 2 seconds.
+B) The system should be available 99.9% of the time.
+C) The user should be able to reset their password.
+D) The system should be secure.
+
+---
+
+**Q6.** Which is a **non-functional requirement**?
+
+A) User can add products to cart.
+B) User can cancel an order.
+C) User can create an account.
+D) The system should support 10,000 simultaneous users.
+
+---
+
+**Q7.** After the SRS has been prepared, the customer discovers:
+
+> "We actually need an option to pay using UPI."
+
+Which RE activity deals with handling this **change in requirements**?
+
+A) Requirement Management
+B) Requirement Elicitation
+C) Coding
+D) Deployment
+
+---
+
+**Q8.** True or False:
+
+> **SRS is a process used to collect requirements from the customer.**
+no elicitation is the process of collecting user req , srs is a well made document that stores user specifition and this srs is built in the specification part.
+
+---
+
+**Q9.** Put these activities in the correct logical order:
+
+**Validation, Elicitation, Analysis, Specification**
+correct order : elicitation , analysis , specification , validation.
+---
+
+**Q10.** In your own words, explain the difference between:
+
+> **Requirement Engineering** and **SRS**
+srs is part of whole re process while re is a process to collect , refine , document , validate and manage user requirements.
+
+Answer them one by one or all together.
+
+
+
+
+
+b) to fined out and define what the software should do by doing 5 things elicitation , analysis , specification , validation ,management.
+
+gathering info by talking to user is collection user requirements which comes under elicitation.
+
+
+to check weather requiments whichare gathered in elicitation part are consistent , unambiguous , feasible this procedure is known as requirement analysis, but validation is checking the document is representing the actual user requiments.
+analysis : are these req clear , unambiguous , consistent and workable.
+validation : is the document covering all user req .
+
+non-functional req includes : usability , performance , security.
+while functional req icludes what actions should the system should allow the user to like resetting password, making transaction , login
+
+d) users can support 10,000 users to run system at the same time that is called scalibility comes under non-functional req.
+
+a) requirement management handles change in requirement.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+a) making transaction is an action which dfalls under functional requirement . q2 answer is b) non-functional req as the response time falls under the performance which describes how well the task is being done .
+
+
