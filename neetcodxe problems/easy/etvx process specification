@@ -1,0 +1,10 @@
+etvx is a framework that allows us to make a processs precise and measurable.
+these four questions,
+1)entry-criteria : from where should we start this phase , what could be pre-requisite
+2) task : what needs to be done adding a feature, finding bug
+3) verfication : how do we check task was done correctly , we pass it through test cases
+4) exit criteria : when do we stop , when can we say the process is complete maybe when it passes all testcases and review
+
+option a there is the exit criteria for a phase once we verify our feature by passing test cases and review , option b is sounding like a pre-requisite that one definitly needs to start the coding phasae the dfds sre important documents that enable developers to understands the data flow so option b.
+
+
