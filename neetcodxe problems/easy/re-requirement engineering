@@ -122,19 +122,49 @@ d) users can support 10,000 users to run system at the same time that is called 
 
 a) requirement management handles change in requirement.
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 a) making transaction is an action which dfalls under functional requirement . q2 answer is b) non-functional req as the response time falls under the performance which describes how well the task is being done .
 
 
+
+Here is a 3-question practice set on **Software Requirements Specification (SRS)** designed around actual mid-sem paper patterns:
+
+---
+
+### **Question 1 (SRS Verifiability vs. Ambiguity)**
+A software analyst includes two statements in an e-commerce SRS draft:
+1. *"The system must be fast, highly responsive, and user-friendly during peak sales."*
+2. *"The checkout page response time shall be under 1.5 seconds for 95% of requests at a load of up to 5,000 concurrent users."*
+
+Which characteristic of a good SRS is violated by Statement 1, and how does Statement 2 fix it?
+
+* **A)** Statement 1 violates **Completeness**; Statement 2 adds implementation details.
+* **B)** Statement 1 violates **Verifiability** (it uses vague terms that cannot be concretely measured); Statement 2 specifies a measurable performance metric.
+* **C)** Statement 1 violates **Traceability**; Statement 2 imposes a design constraint.
+
+---
+
+### **Question 2 (IEEE SRS Core Components)**
+According to the IEEE standard for SRS structure, which core component specifies static capacity limits (e.g., maximum simultaneous users or records) and dynamic operational limits (e.g., response times and throughput)?
+
+* **A)** Functional Requirements
+* **B)** Performance Requirements
+* **C)** Design Constraints
+* **D)** External Interface Requirements
+
+---
+
+### **Question 3 (SRS Validation & Defect Types)**
+During an SRS inspection review with stakeholders, the team discovers that a required capability—handling credit card authorization failures—was completely missing from the document. 
+
+Based on SRS defect metrics, what is this most common SRS error called, and what percentage of review defects does it typically represent?
+
+* **A)** **Ambiguity** (~5–20%)
+* **B)** **Omission** (~30%)
+* **C)** **Inconsistency** (~10–30%)
+* **D)** **Incorrect Fact** (~10–30%)
+
+---
+
+Drop your choices (**e.g., 1-B, 2-B, 3-B**), and let's go over them! 🎯
+
+What area would you like to cover after checking these answers—Data Flow Diagrams (DFDs) or Function Point Analysis?
