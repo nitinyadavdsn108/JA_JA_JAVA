@@ -11,6 +11,11 @@ public class sort2Darray {
                 { 1, 400 },
         };
 
+
+    // this is o(n^2) comp solution
+    // basically sorting every row in ascending order 
+    // order in which first element of each row appears should be ascending
+
         for (int i = 0; i < arr.length; i++) {
 
             for (int j = i + 1; j < arr.length; j++) {
