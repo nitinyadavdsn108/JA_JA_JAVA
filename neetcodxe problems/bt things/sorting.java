@@ -57,7 +57,7 @@ class sorting {
          * }
          */
 
-        quickSort(a, 0, n);
+        quickSort(a, 0, n - 1);
         System.out.println(Arrays.toString(a));
 
     }
