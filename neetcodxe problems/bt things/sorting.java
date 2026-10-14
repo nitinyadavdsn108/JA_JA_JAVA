@@ -56,9 +56,37 @@ class sorting {
          * 
          * }
          */
+        /*
+         * quickSort(a, 0, n - 1);
+         */
 
-        quickSort(a, 0, n - 1);
+        divide(a);
+
         System.out.println(Arrays.toString(a));
+
+    }
+
+    public static void divide(int[] a, int start, int end) {
+
+        if (start >= end) {
+            return;
+        }
+        // to remain in range of Integer i.e :
+
+        int mid = start + (end - start) / 2;
+
+        divide(a, start, mid);
+        divide(a, mid + 1, end);
+
+        conquer(a, start, mid, end);
+
+    }
+
+    public static void conquer(int[] a, int start, int mid, int end) {
+        int[] res = new int[end - start + 1];
+
+        int ind1 = start;
+        int ind2 = mid + 1;
 
     }
 
