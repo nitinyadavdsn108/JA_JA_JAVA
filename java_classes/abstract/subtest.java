@@ -33,7 +33,7 @@ abstract class box {
     void box2() {
     }
 
-    // abstract class contain zero no of abstract merthod also
+    // abstract class contain zero no of abstract method also
 }
 
 abstract class test {
@@ -55,3 +55,22 @@ public class subtest extends test {
     }
 
 }
+
+/* what is member modifier. */
+
+class a {
+    public void m1() {
+        System.out.println("a class method");
+    }
+}
+
+// even though method is public , we cannot take accesss of it outside this java
+// file becuase class a is not public.
+
+/*
+ * public class b {
+ * public void m1() {
+ * System.out.println("b class method");
+ * }
+ * }
+ */
