@@ -1,29 +1,81 @@
 #include <stdio.h>
 
-int main()
+void merge(int arr[], int low, int mid, int high)
 {
-    int n = 5;
-
-    int arr[5] = {5, 3, 4, 1, 2};
-
-    for (int i = 0; i < n - 1; i++)
+    int i = low;
+    int j = mid + 1;
+    int k = 0;
+    int temp[high - low + 1];
+    while (i <= mid && j <= high)
     {
-        int ele = arr[i + 1];
-        int j = i;
-
-        while (j >= 0 && arr[j] > ele)
+        if (arr[i] <= arr[j])
         {
-            arr[j + 1] = arr[j];
-            j--;
+            temp[k] = arr[i];
+            i++;
+        }
+        else
+        {
+            temp[k] = arr[j];
+            j++;
         }
 
-        arr[j + 1] = ele;
+        k++;
     }
 
-    for (int i = 0; i < 5; i++)
+    // copy the remaining ele from this unexhausted array
+
+    while (i <= mid)
+    {
+        temp[k] = arr[i];
+        k++;
+        i++;
+    }
+
+    while (j <= high)
+    {
+        temp[k] = arr[j];
+        k++;
+        j++;
+    }
+
+    for (int x = 0; x < k; x++)
+    {
+        arr[low + x] = temp[x];
+    }
+}
+
+void divide(int arr[], int low, int high)
+{
+    // base condtion
+    if (low >= high)
+    {
+        return;
+    }
+    else
+    {
+        int mid = (low + high) / 2;
+        divide(arr, low, mid);
+        divide(arr, mid + 1, high);
+        merge(arr, low, mid, high);
+    }
+}
+
+int main()
+{
+
+    int arr[8] = {5, 7, 3, 4, 8, 6, 1, 2};
+
+    for (int i = 0; i < 8; i++)
     {
         printf("%d\t", arr[i]);
     }
 
-    /* insertion sort */
+    divide(arr, 0, 7);
+
+    printf("\n");
+
+    for (int i = 0; i < 8; i++)
+    {
+        printf("%d\t", arr[i]);
+    }
 }
