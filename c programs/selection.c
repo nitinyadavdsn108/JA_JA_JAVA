@@ -1,17 +1,5 @@
 #include <stdio.h>
 
-int findMin(int arr[], int st, int en)
-{
-    if (st >= en)
-    {
-        return;
-    }
-    else
-    {
-        return findMin(arr, st + 1, en);
-    }
-}
-
 void selection(int arr[], int s, int e)
 {
     if (s >= e)
@@ -19,7 +7,14 @@ void selection(int arr[], int s, int e)
         return;
     }
 
-    int min = findMin(arr, s + 1, e);
+    int min = s;
+    for (int i = s + 1; i < e; i++)
+    {
+        if (arr[i] < arr[min])
+        {
+            min = i;
+        }
+    }
 
     if (arr[s] > arr[min])
     {
@@ -27,6 +22,8 @@ void selection(int arr[], int s, int e)
         arr[s] = arr[min];
         arr[min] = temp;
     }
+
+    selection(arr, s + 1, e);
 }
 
 int main()
