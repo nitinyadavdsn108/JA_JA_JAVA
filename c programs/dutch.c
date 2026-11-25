@@ -1,7 +1,9 @@
 #include <stdio.h>
 int main()
 {
-    int arr[3] = {2, 0, 1};
+    int arr[3] = {2, 1, 0, 2, 0, 1};
+
+    int n = sizeof(arr) / sizeof(arr[0]);
 
     for (int i = 0; i < 3; i++)
     {
@@ -12,7 +14,7 @@ int main()
 
     int low = 0;
     int mid = 0;
-    int high = 2;
+    int high = n - 1;
 
     int temp;
 
@@ -29,12 +31,12 @@ int main()
             low++;
         }
 
-        if (arr[mid] == 1)
+        else if (arr[mid] == 1)
         {
             mid++;
         }
 
-        if (arr[mid] == 2)
+        else if (arr[mid] == 2)
         {
             // swap arr[mid] with arr[high]
             temp = arr[mid];
